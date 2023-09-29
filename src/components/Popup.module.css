@@ -1,0 +1,169 @@
+.popup, .inner_popup {
+    position: fixed;
+    top: 0;
+    left: 230;
+    width: 100%;
+    height:max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:15px;
+}
+
+.popup {
+    background: rgba(0, 0, 0, 0.5);
+    left:50em;
+}
+
+.inner_popup {
+    top: 20%;
+    left: 24.5%;
+    width: 50%;
+    height: 50%;
+    background: white;
+}
+.close_btn {
+    background: red;
+    color: white;
+    padding: 15px 20px; 
+    border-radius: 25px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    outline: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.close_btn:hover {
+    background: darkred; 
+}
+.main_title{
+    display: flex;
+    /* margin-top: 1em; */
+    margin-bottom: em;
+    top: 0.3em;
+    position: absolute;
+    justify-content: space-between;
+    gap: 27em;
+    color: black;
+}
+.main_title h4{
+    color:blue;
+}
+.item_container{
+    display:grid;
+    grid-template-rows:50%;
+    align-items:flex-end;
+    margin-top:1.8em;
+    margin-right:1.0em;
+    margin-bottom:12.5em;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20em;
+    text-wrap: nowrap;
+    margin-top: 8px;
+    border-bottom: 1px solid #ccc; /* Add this line to create the gray line */
+    padding-bottom: 8px; /* Add this line for spacing between the row content and the line */
+  }
+.btn_group{
+    display:block;
+    position:absolute;
+    right:3%;
+    top: 16em;
+    display: flex;
+    gap: 1.6em;
+    
+}
+.save{
+    padding-right:10px;
+}
+.btn-group button{
+    display:none;
+}
+.save{
+    color:white;
+    background:blue;
+    border-radius:10px;
+    padding:9px 25px 7.5px 20px;
+}
+.box{
+    width: 35px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    border: 1px solid #ccc; /* Add a border for a clear separation */
+    margin-right: 10px;
+    background-color: #444444;
+}
+.black{
+    background-color: #444444;
+    margin-left:5px;
+    margin-top:2px;
+}
+.white{
+    background-color:#FFFFFF;
+    margin-left:5px;
+    margin-top:2px;
+}
+.blue{
+    background-color:#2072EF;
+    margin-left:5px;
+    margin-top:2px;
+}
+.darkblue{
+    background-color:#0053D1;
+    margin-left:5px;
+    margin-top:2px;
+}
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .popup, .inner_popup {
+        left: 25%;
+            height: 25em;
+    }
+    
+    .main_title {
+        flex-direction: row;
+        gap: 6em;
+    }
+    
+    .item_container {
+        margin-right: 0;
+    }
+    
+    .row {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        font-size:11px;
+    }
+    
+    .btn_group {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: auto;
+        bottom: 4.9em;
+        height: 2.6em;
+    }
+    .close_btn{
+        padding:7px 7px;
+    }
+    .white{
+        position: relative;
+        top: 0.2em;
+    }
+    .blue{
+        position: relative;
+        top: 0.2em;
+    }
+    .black{
+        position: relative;
+        top: 0.2em;
+    }
+    .darkblue{
+        position: relative;
+        top: 0.2em;
+    }
+}

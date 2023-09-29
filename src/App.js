@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Popup from "./components/Popup";
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { HashLoader } from "react-spinners";
 
 function App() {
+  const [isTriggered, setIsTriggered] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2800);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading ? (
+        <div className="center_container">
+          <HashLoader  color="#36d7b7" />
+        </div>
+      ) : null}
+
+      {!loading ? (
+        <div>
+          <menu>
+            <br></br>
+            <button className="open" onClick={() => setIsTriggered(true)}>
+              Open Popup
+            </button>
+          </menu>
+          <Popup trigger={isTriggered} setTrigger={setIsTriggered} />
+        </div>
+      ) : null}
     </div>
   );
 }
