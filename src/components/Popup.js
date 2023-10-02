@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Popup.module.css";
-function Popup(props) {
+function Popup(props,) {
   return props.trigger ? (
     <div className={classes.popup}>
       <div className={classes.inner_popup}>
